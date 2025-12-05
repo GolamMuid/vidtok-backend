@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "Video Upload API",
+    "_postman_id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+    "description": "Test collection for video + thumbnail upload API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Video + Thumbnail",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "video",
+              "type": "file",
+              "src": "SELECT_YOUR_VIDEO_FILE_PATH"
+            },
+            {
+              "key": "thumbnail",
+              "type": "file",
+              "src": "SELECT_YOUR_THUMBNAIL_FILE_PATH"
+            },
+            {
+              "key": "userId",
+              "type": "text",
+              "value": "001"
+            },
+            {
+              "key": "userName",
+              "type": "text",
+              "value": "John Doe"
+            },
+            {
+              "key": "title",
+              "type": "text",
+              "value": "My Video Title"
+            },
+            {
+              "key": "description",
+              "type": "text",
+              "value": "My video description"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["upload"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
