@@ -10,6 +10,7 @@ var uploadRouter = require("./routes/upload");
 var videosRouter = require("./routes/videos");
 var commentsRouter = require("./routes/comments");
 var videoDetailsRouter = require("./routes/videoDetails");
+var userVideosRouter = require("./routes/userVideos");
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use("/upload", uploadRouter);
 app.use("/videos", videosRouter);
 app.use("/comments", commentsRouter);
 app.use("/video-details", videoDetailsRouter);
+app.use("/user-videos", userVideosRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
